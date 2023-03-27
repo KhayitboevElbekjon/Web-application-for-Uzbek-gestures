@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+
+    <header>
+
+        <div class="box_header">
+            <p class="theme_header"></p>
+        </div>
+
+      </header> 
+
+      <div class="work_space"> 
+              
+        <img src="{{one_soz.gif.url}}" alt="">
+       <div class="info_content" >
+
+ 
+        <h5>{{one_soz.nom}}</h5>
+        <p>{{one_soz.izhoh}}</p>
+        </div>
+        </div>
+        <footer>
+            <a href="/sozlar/{{one_soz.bolim_fk.id}}">
+            <div   class="bottom">
+
+              <p class="bottom_back">ortga </p>
+                </div>
+            </a>
+          </footer>
+<script src="{% static 'workspace.js' %}"></script>
+</body>
+</html>

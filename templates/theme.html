@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+    <header>
+
+        <div class="box_header">
+            <p class="theme_header"></p>
+        </div>
+
+      </header> 
+      <section class="section_info">
+
+       <div class="theme_line">
+        <div class="box">
+
+
+{% for i in soz %}
+        <div class="big_info">
+            <a href="/OneSoz/{{i.id}}">
+                <div class="info">
+                    <div class="first_icon">
+                         <span  class="number">{{forloop.counter}}</span>
+                    </div>
+                    <p class="text">{{i.nom}}</p>
+                    <ion-icon class="done" name="attach-outline"></ion-icon>
+                </div>
+            </a>
+        </div>
+{% endfor %}
+
+<!--        <div class="big_info">-->
+<!--                <div class="info">-->
+<!--                    <div class="first_icon">-->
+<!--                         <span  class="number">1.1</span>-->
+<!--                    </div>-->
+<!--                    <p class="text">Lorem, ipsum dolor.</p>-->
+<!--                    <ion-icon class="done" name="attach-outline"></ion-icon>-->
+<!--                </div>-->
+<!--        </div> -->
+
+
+        </div>
+        </section>
+        <footer>
+            <a href="/">
+            <div   class="bottom">
+                <p class="bottom_back">Bosh sahifa </p>
+                </div>
+                </a>
+          </footer>
+    
+    
+    <script src="{% static 'themescript.js'%}"></script>
+</body>
+</html>
