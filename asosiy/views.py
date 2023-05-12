@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.http import HttpResponse, FileResponse
+from django.shortcuts import render, get_object_or_404
 from django.views import View
 
 from .models import *
@@ -25,3 +26,20 @@ class OneSozView(View):
         }
         return render(request,'workspace.html',data)
 
+
+def down(request):
+    soz={'bolim':Bolim.objects.all()
+
+         }
+    return render(request,'down.html',soz)
+def KopSozlar(request,pk):
+    data={
+        'data':Sozlar.objects.filter(bolim_fk__id=pk),
+        'bolim':Sozlar.objects.filter(bolim_fk__id=pk).last()
+    }
+    return render(request,'Download.html',data)
+def download(request, id):
+    obj = Sozlar.objects.get(id=id)
+    filename = obj.gif.path
+    response = FileResponse(open(filename, 'rb'))
+    return response

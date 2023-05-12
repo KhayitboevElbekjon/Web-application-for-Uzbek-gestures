@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.nomi{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.big_box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+.box{
+/* border: 1px solid red; */
+background-color: #eeecec;
+min-width: 20%;
+margin: 10px;
+padding: 20px;
+border-radius: 20px;
+}
+.box h1{
+    font-weight: 400;
+    text-align: center;
+}
+.box .jes{
+display: block;
+    width: 140px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+.box .download{
+    width: 40px;
+    margin-left: 80%;
+}

@@ -11,7 +11,6 @@ sreach = document.querySelector(".sreach")
 search_section = document.querySelector(".search_section")
 text=document.querySelector(".text")
 let big_info;
-alert("btn_sreach")
 
 big_infos.forEach(big_info => {
 

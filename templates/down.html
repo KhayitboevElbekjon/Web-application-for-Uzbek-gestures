@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Blog</title>
+    <style>
+        .container-fluid{
+            width: 500px;
+            border: 1px solid lightgray;
+            padding:0 15px;
+            font-family: sans-serif;
+            transition: .5s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .container-fluid a{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            font-size: 19px;
+            color: #111222;
+        }
+
+        .container-fluid:hover{
+            transform: translateX(10px);
+        }
+
+        .container-fluid i{
+            transition: .5s ease-in-out;
+        }
+
+        .container-fluid i:hover{
+            transform: translateX(10px);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<h2 style="margin-left: 200px">Bo'limlar</h2>
+{% for i in bolim %}
+    <div class="container-fluid">
+            <a href="/kopsozlar/{{i.id}}" >
+                <p>{{i.nom}}</p>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+    </div>
+{% endfor %}
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

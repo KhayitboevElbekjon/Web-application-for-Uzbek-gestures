@@ -8,4 +8,7 @@ urlpatterns = [
     path('', Home.as_view()),
     path('sozlar/<int:pk>', SozlarView.as_view()),
     path('OneSoz/<int:pk>', OneSozView.as_view()),
+    path('download',down),
+    path('down/<int:id>',download),
+    path('kopsozlar/<int:pk>',KopSozlar),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

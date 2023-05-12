@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'Download.css' %}">
+</head>
+<body>
+
+    <h1 class="title">
+        Yuklamalar
+    </h1>
+
+    <div class="bulim">
+
+        <h1 class="nomi">{{bolim.bolim_fk.nom}}</h1>
+        <div class="big_box">
+            {% for i in data %}
+            <div class="box">
+                <h1 class="title">{{i.nom}}</h1>
+                <hr><br>
+                <img class="jes" src="{{i.gif.url}}" alt="">
+                <a href="/down/{{i.id}}">
+
+                    <img class="download" src="/media/download-solid.svg" alt="" srcset="">
+                </a>
+            </div>
+            {% endfor %}
+<!--            <div class="box">-->
+<!--                <h1 class="title">ko'rsatkich</h1>-->
+<!--                <img class="jes" src="https://geografiyaurduolimp.files.wordpress.com/2020/11/giphy-3-9.gif" alt="">-->
+<!--                <a href="">-->
+
+<!--                    <img class="download" src="./download-solid.svg" alt="" srcset="">-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="box">-->
+<!--                <h1 class="title">ko'rsatkich</h1>-->
+<!--                <img class="jes" src="https://geografiyaurduolimp.files.wordpress.com/2020/11/giphy-3-9.gif" alt="">-->
+<!--                <a href="">-->
+
+<!--                    <img class="download" src="./download-solid.svg" alt="" srcset="">-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="box">-->
+<!--                <h1 class="title">ko'rsatkich</h1>-->
+<!--                <img class="jes" src="https://geografiyaurduolimp.files.wordpress.com/2020/11/giphy-3-9.gif" alt="">-->
+<!--                <a href="">-->
+
+<!--                    <img class="download" src="./download-solid.svg" alt="" srcset="">-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="box">-->
+<!--                <h1 class="title">ko'rsatkich</h1>-->
+<!--                <img class="jes" src="https://geografiyaurduolimp.files.wordpress.com/2020/11/giphy-3-9.gif" alt="">-->
+<!--                <a href="">-->
+
+<!--                    <img class="download" src="./download-solid.svg" alt="" srcset="">-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="box">-->
+<!--                <h1 class="title">ko'rsatkich</h1>-->
+<!--                <img class="jes" src="https://geografiyaurduolimp.files.wordpress.com/2020/11/giphy-3-9.gif" alt="">-->
+<!--                <a href="">-->
+
+<!--                    <img class="download" src="./download-solid.svg" alt="" srcset="">-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="box">-->
+<!--                <h1 class="title">ko'rsatkich</h1>-->
+<!--                <img class="jes" src="https://geografiyaurduolimp.files.wordpress.com/2020/11/giphy-3-9.gif" alt="">-->
+<!--                <a href="">-->
+
+<!--                    <img class="download" src="./download-solid.svg" alt="" srcset="">-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="box">-->
+<!--                <h1 class="title">ko'rsatkich</h1>-->
+<!--                <img class="jes" src="https://geografiyaurduolimp.files.wordpress.com/2020/11/giphy-3-9.gif" alt="">-->
+<!--                <a href="">-->
+
+<!--                    <img class="download" src="./download-solid.svg" alt="" srcset="">-->
+<!--                </a>-->
+<!--            </div>-->
+            
+        </div>
+    </div>
+    </body>
+    </html>
